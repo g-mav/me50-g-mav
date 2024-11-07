@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Search</title>
+    <style>
+        .container {
+            text-align: center;
+            width: 100%;
+            height: auto;
+            overflow-x;
+            padding: 20px;
+        }
+
+        h3 {
+            font-size: 20px;
+            font-weight: inherit;
+            color: #000000;
+            margin-bottom: 16px;
+            text-align: left;
+            font-family: Arial, sans-serif;
+        }
+        /* Basic styling for the form layout */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: left;
+            align-items: left;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f1f1f1;
+        }
+
+        .top-right-links {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .top-right-links a {
+            margin-left: 15px;
+            text-decoration: none;
+            color: #000000;
+            font-size: 13px;
+        }
+
+        .advanced-search-form {
+            width: 100%;
+            height: 100%;
+            background-color: #ffffff;
+        }
+
+        h2 {
+            font-size: 20px;
+            font-weight: inherit;
+            color: #d93025;
+            margin-bottom: 20px;
+            text-align: left;
+            font-family: Arial, sans-serif;
+        }
+
+        label {
+            font-size: 0.9em;
+            color: #5f6368;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 20px;
+            font-size: 1em;
+            border: 1px solid #dfe1e5;
+            border-radius: 4px;
+            outline: none;
+        }
+
+        /* Blue Advanced Search button */
+        input[type="submit"] {
+            width: 123px;
+            background-image: -webkit-linear-gradient(top,#4d90fe,#4787ed);
+            min-width: 120px;
+            height: 30px;
+            margin: 10px;
+            padding: 10px;
+            font-size: 1em;
+            color: #ffffff;
+            background-color: #4d90fe;
+            border: 1px solid 1px solid #3079ed;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #1765c5;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img src="assets/google_logo.png" alt="Google Logo" style="max-width: 74px; height: 24px;">
+
+    <div class="top-right-links">
+        <a href="index.html">Back to Google</a>
+        <a href="imageSearch.html">Image Search</a>
+    </div>
+
+    <div class="advanced-search-form">
+        <h2>Advanced Search</h2>
+        <h3>Find pages with…</h3>
+        <form action="https://www.google.com/search">
+            <table>
+                <tr>
+                    <td>
+                        <label for="all">all these words:</label>
+                        <input type="text" id="all" name="as_q">
+                    </td>
+                    <td class="description">Type the important words: <em>tri-colour rat terrier</em></td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="exact">this exact word or phrase:</label>
+                        <input type="text" id="exact" name="as_epq">
+                    </td>
+                    <td class="description">Put exact words in quotes: <em>"rat terrier"</em></td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="any">any of these words:</label>
+                        <input type="text" id="any" name="as_oq">
+                    </td>
+                    <td class="description">Type OR between all the words you want: <em>miniature OR standard</em></td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="none">none of these words:</label>
+                        <input type="text" id="none" name="as_eq">
+                    </td>
+                    <td class="description">Put a minus sign just before words that you don't want: <em>-rodent, -"Jack Russell"</em></td>
+                </tr>
+            </table>
+            <input type="submit" value="Advanced Search">
+        </form>
+    </div>
+
+</body>
+</html>
